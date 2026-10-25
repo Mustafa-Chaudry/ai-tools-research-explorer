@@ -1,0 +1,122 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f8fc;
+    color: #1d2d43;
+    line-height: 1.6;
+    margin: 24px;
+}
+
+.container {
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.site-header {
+    background-color: #17324d;
+    color: #ffffff;
+    text-align: center;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.site-header h1 {
+    color: #ffffff;
+}
+
+.site-header p {
+    color: #e5eff5;
+}
+
+h1 {
+    color: #16446b;
+}
+
+
+
+/* Shared styling for all sections */
+
+.content-section {
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Individual section colours */
+
+#topics {
+    background-color: #eee8f7;
+}
+
+#explore {
+    background-color: rgb(239, 205, 205);
+}
+
+#idea {
+    background-color: #e7f3ea;
+}
+
+.content-section h2,
+.content-section h3 {
+    color: #183b59;
+}
+
+
+/* Navigation */
+
+.site-navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.site-navigation a {
+    background-color: #17666f;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Mouse hover effec */
+
+.site-navigation a:hover {
+    background-color: #104e56;
+    text-decoration: underline;
+}
+
+/* Keyboard accessibility */
+
+a:focus-visible {
+    outline: 3px solid #a65b00;
+    outline-offset: 3px;
+}
+
+
+/* AI topic cards */
+
+#topics ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    list-style: none;
+    padding-left: 0;
+}
+
+#topics li {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #d8d0e8;
+    border-radius: 8px;
+}
+
+/* Two columns on larger screens */
+
+@media (min-width: 700px) {
+    #topics ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
