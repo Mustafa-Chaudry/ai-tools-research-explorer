@@ -81,6 +81,14 @@ h1 {
     font-weight: bold;
 }
 
+.future-note {
+    background-color: #fff0d9;
+    border-left: 4px solid #9a6400;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
 /* Mouse hover effec */
 
 .site-navigation a:hover {
