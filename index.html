@@ -77,6 +77,65 @@
         software and Crossref for academic publications.
     </p>
 
+
+<form id="search-form">
+
+    <h3>Search AI Resources</h3>
+
+    <label for="search-topic">What would you like to explore?</label>
+
+    <input
+        type="search"
+        id="search-topic"
+        name="topic"
+        placeholder="e.g. Agentic AI"
+        value="Agentic AI"
+        minlength="2"
+        maxlength="80"
+        required
+    >
+
+    <div class="form-options">
+
+        <div>
+            <label for="source">Resource type</label>
+
+            <select id="source" name="source">
+                <option value="all">All resources</option>
+                <option value="github">GitHub projects</option>
+                <option value="research">Research papers</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="sort-order">Sort results</label>
+
+            <select id="sort-order" name="sort">
+                <option value="relevance">Relevance</option>
+                <option value="title">Title (A-Z)</option>
+            </select>
+        </div>
+
+    </div>
+
+    <label class="checkbox-label">
+        <input
+            type="checkbox"
+            id="show-descriptions"
+            checked
+        >
+        Show resource descriptions
+    </label>
+
+    <button type="submit">Search Resources</button>
+
+</form>
+
+<p id="search-status" role="status"></p>
+
+<div id="search-results"></div>
+
+
     <h3>Open-Source AI Projects</h3>
 
     <p>
