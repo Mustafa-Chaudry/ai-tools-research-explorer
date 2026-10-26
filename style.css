@@ -277,3 +277,34 @@ a:focus-visible {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
+
+/* Suggested search topics */
+
+.quick-topics {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.quick-topics span {
+    font-weight: bold;
+}
+
+.quick-topics .topic-shortcut {
+    background-color: #edf5f5;
+    color: #17666f;
+    border: 1px solid #17666f;
+    border-radius: 20px;
+    padding: 7px 12px;
+    font: inherit;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.quick-topics .topic-shortcut:hover {
+    background-color: #104e56;
+    color: white;
+}

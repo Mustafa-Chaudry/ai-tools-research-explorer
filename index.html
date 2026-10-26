@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tools & Research Explorer</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
     <script src="script.js" defer></script>
 </head>
 
@@ -86,6 +87,35 @@
 <form id="search-form" class="search-form">
 
     <h3>Search AI Resources</h3>
+
+
+<div class="quick-topics" role="group"
+     aria-label="Suggested AI searches">
+
+    <span>Try a topic:</span>
+
+    <button type="button" class="topic-shortcut"
+            data-topic="Agentic AI">
+        Agentic AI
+    </button>
+
+    <button type="button" class="topic-shortcut"
+            data-topic="AI Governance">
+        AI Governance
+    </button>
+
+    <button type="button" class="topic-shortcut"
+            data-topic="Healthcare AI">
+        Healthcare AI
+    </button>
+
+    <button type="button" class="topic-shortcut"
+            data-topic="AI Engineering">
+        AI Engineering
+    </button>
+
+</div>
+
 
     <label for="search-topic">What would you like to explore?</label>
 

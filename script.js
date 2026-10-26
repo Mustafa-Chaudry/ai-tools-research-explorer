@@ -301,3 +301,20 @@ form.addEventListener("submit", async function(event) {
         searchButton.textContent = "Search Resources";
     }
 });
+
+
+// jQuery suggested search shortcuts
+
+$(function () {
+
+    $(".topic-shortcut").on("click", function () {
+
+        const selectedTopic = $(this).attr("data-topic");
+
+        $("#search-topic").val(selectedTopic);
+
+        document.getElementById("search-form").requestSubmit();
+
+    });
+
+});
