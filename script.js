@@ -1,6 +1,6 @@
 
 // AI Tools & Research Explorer
-// Week 5 - Live API integration
+// Live API integration
 
 const form = document.getElementById("search-form");
 const results = document.getElementById("search-results");
@@ -63,7 +63,7 @@ function createResultGroup(title) {
 
 function addResultCard(list, item) {
     const card = document.createElement("article");
-    card.className = "result-card";
+    card.className = "result-card card shadow-sm h-100";
 
     addText(card, "h4", item.title);
 
@@ -74,6 +74,7 @@ function addResultCard(list, item) {
     addText(card, "p", item.metadata, "result-meta");
 
     const link = document.createElement("a");
+    link.className = "btn btn-outline-primary btn-sm align-self-start mt-2";
     link.href = item.url;
     link.textContent = item.linkLabel;
     link.target = "_blank";

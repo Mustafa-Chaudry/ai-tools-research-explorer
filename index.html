@@ -6,6 +6,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tools & Research Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
     <script src="script.js" defer></script>
@@ -13,9 +17,9 @@
 
 <body>
 
-<div class="container">
+<div class="site-container">
 
-<header class="site-header">
+<header class="site-header shadow-sm">
 
     <h1>
     AI Tools & Research Explorer</h1>
@@ -31,7 +35,7 @@
 </nav></header>
 <main>
 
-    <section id="topics" class="content-section">
+    <section id="topics" class="content-section card border-0">
 
         <h2>Topics I'm Exploring</h2>
 
@@ -74,13 +78,12 @@
     </ul>
     </section>
 
-    <section id="explore" class="content-section">
+    <section id="explore" class="content-section card border-0">
 
     <h2>Explore AI Projects and Research</h2>
 
     <p>
-        Two useful places to start are GitHub for open-source
-        software and Crossref for academic publications.
+        Search open-source AI projects and academic publications using live data from GitHub and Crossref.
     </p>
 
 
@@ -121,6 +124,7 @@
 
     <input
         type="search"
+        class="form-control form-control-lg"
         id="search-topic"
         name="topic"
         placeholder="e.g. Agentic AI"
@@ -130,22 +134,22 @@
         required
     >
 
-    <div class="form-options">
+    <div class="row g-3 mb-3">
 
-        <div>
+        <div class="col-12 col-md-6">
             <label for="source">Resource type</label>
 
-            <select id="source" name="source">
+            <select id="source" name="source" class="form-select">
                 <option value="all">All resources</option>
                 <option value="github">GitHub projects</option>
-                <option value="research">Research papers</option>
+                <option value="research">Research publications</option>
             </select>
         </div>
 
-        <div>
+        <div class="col-12 col-md-6">
             <label for="sort-order">Sort results</label>
 
-            <select id="sort-order" name="sort">
+            <select id="sort-order" name="sort" class="form-select">
                 <option value="relevance">Relevance</option>
                 <option value="title">Title (A-Z)</option>
             </select>
@@ -162,7 +166,7 @@
         Show resource descriptions
     </label>
 
-    <button type="submit">Search Resources</button>
+    <button type="submit" class="btn btn-primary search-submit px-4">Search Resources</button>
 
 </form>
 
@@ -171,52 +175,47 @@
 <div id="search-results"></div>
 
 
-    <h3>Open-Source AI Projects</h3>
+    <details class="results-guide">
+        <summary>Understanding the results</summary>
 
-    <p>
-        GitHub hosts projects created by developers and
-        researchers around the world.
-    </p>
+        <h3>GitHub repositories</h3>
+        <p>
+            GitHub results show open-source projects, including their descriptions,
+            programming languages and star counts. The More details button can also
+            show a repository's licence, open issues and last update date.
+        </p>
 
-    <p>
-        <a href="https://github.com/search?q=agentic+AI&amp;type=repositories">
-            Explore Agentic AI repositories on GitHub
-        </a>
-    </p>
+        <h3>Research publications</h3>
+        <p>
+            Crossref provides publication records, including titles, authors, dates,
+            source information and DOI links when available. 
+        </p>
 
-    <h3>Academic Research</h3>
-
-    <p>
-        Crossref provides access to publication metadata,
-        including research titles, authors and DOI links.
-    </p>
-
-    <p>
-        <a href="https://search.crossref.org/search/works?q=agentic%20AI&amp;from_ui=yes">
-            Find Agentic AI research on Crossref
-        </a>
-    </p>
+        <h3>Search limitations</h3>
+        <p>
+            The application retrieves six results from each selected source.
+            The relevance order comes from the providers. 
+            The alphabetical order applies only to the results already retrieved.
+        </p>
+    </details>
 
     </section>
 
-    <section id="idea" class="content-section">
+    <section id="idea" class="content-section card border-0">
 
     <h2>The Idea</h2>
     <p>
         Finding useful AI tools and the research behind them
         often means searching different websites separately.
-        I want to make that process easier.
+        I wanted to make that process easier.
     </p>
 
     <p>
-        The goal is to bring projects and publications
-        together so users can search by topic, discover
-        relevant resources and explore them from one place.
-    </p>
-
-    <p class="future-note">
-    <strong>Current Search Limitations:</strong>
-    Search  currently retrieves up to six results from each selected provider. Title sorting applies only to these retrieved results.
+        The aim is to bring projects and publications together so users can search by topic, find
+        relevant resources and explore them from one place. 
+        This application is a prototype that I have developed for my Web Technologies Module
+        as part of my Msc Computer Science with Artifical Intelligence degree
+        and provides a starting point for further development.
     </p>
 
     </section>
