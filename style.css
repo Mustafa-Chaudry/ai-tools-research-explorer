@@ -282,6 +282,13 @@ a:hover {
     margin-bottom: 18px;
 }
 
+/*
+ * Bootstrap button customisation through component CSS variables.
+ * These overrides set the application's button colours and states.
+ * Reference: Bootstrap (n.d.-a), Buttons, CSS variables.
+ * https://getbootstrap.com/docs/5.3/components/buttons/#css
+ * Accessed: 26 October 2026.
+ */
 .search-submit {
     --bs-btn-color: var(--surface);
     --bs-btn-bg: var(--emerald);

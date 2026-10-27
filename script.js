@@ -129,7 +129,12 @@ function addResultCard(list, item) {
     list.appendChild(card);
 }
 
-
+/*
+ * API documentation: GitHub (n.d.), REST API endpoints for search.
+ * Repository searches use q for the query and per_page for the result limit.
+ * https://docs.github.com/en/rest/search/search#search-repositories
+ * Accessed: 26 October 2026.
+ */
 // Search GitHub repositories
 
 async function searchGitHub(topic, sortOrder, showDescription) {
@@ -180,7 +185,13 @@ async function searchGitHub(topic, sortOrder, showDescription) {
     }
 }
 
-
+/*
+ * API documentation: Crossref (n.d.), REST API.
+ * The /works endpoint supplies publication metadata;
+ * query sets the search terms and rows limits the returned records.
+ * https://www.crossref.org/documentation/retrieve-metadata/rest-api/
+ * Accessed: 26 October 2026.
+ */
 // Search Crossref research metadata
 
 async function searchCrossref(topic, sortOrder, showDescription) {
@@ -303,7 +314,15 @@ form.addEventListener("submit", async function(event) {
     }
 });
 
-
+/*
+ * jQuery methods used by the suggested-topic shortcuts:
+ * ready handler: https://api.jquery.com/ready/
+ * click event binding: https://api.jquery.com/on/
+ * attribute reading: https://api.jquery.com/attr/
+ * input value setting: https://api.jquery.com/val/
+ * Reference: jQuery (n.d.), jQuery API documentation.
+ * Accessed: 26 October 2026.
+ */
 // jQuery suggested search shortcuts
 
 $(function () {
@@ -314,6 +333,10 @@ $(function () {
 
         $("#search-topic").val(selectedTopic);
 
+// Native requestSubmit() performs validation and triggers the submit event.
+// Reference: MDN contributors (2025), HTMLFormElement: requestSubmit() method.
+// https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/requestSubmit
+// Accessed: 26 October 2026.
         document.getElementById("search-form").requestSubmit();
 
     });
